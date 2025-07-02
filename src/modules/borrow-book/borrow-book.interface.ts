@@ -6,6 +6,6 @@ export interface IBorrowBook {
   dueDate: Date;
 }
 
-export interface BorrowBookInstanceMethods {
+export interface BorrowBooksInstanceMethods {
   borrowBook(quantity: string): void;
 }
