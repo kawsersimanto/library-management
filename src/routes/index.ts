@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { BookRoutes } from "../modules/book/book.routes";
 
 export const router = Router();
 
@@ -7,7 +8,12 @@ interface Route {
   route: Router;
 }
 
-const routes: Route[] = [];
+const routes: Route[] = [
+  {
+    path: "/books",
+    route: BookRoutes,
+  },
+];
 
 routes.forEach((route) => {
   router.use(route.path, route.route);
