@@ -29,8 +29,8 @@ const getAllBooks = async (req: Request, res: Response) => {
     const allBooks = await Book.find({});
 
     if (allBooks.length === 0) {
-      res.status(404).json({
-        success: false,
+      res.status(200).json({
+        success: true,
         message: "No books found",
         data: [],
       });
