@@ -1,7 +1,18 @@
+import cors from "cors";
 import express, { Application, NextFunction, Request, Response } from "express";
 import { router } from "./routes";
 
 const app: Application = express();
+
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://library-management-lovat-eight.vercel.app",
+    ],
+    credentials: true,
+  })
+);
 
 app.use(express.json());
 
