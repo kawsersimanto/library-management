@@ -9,6 +9,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://library-management-lovat-eight.vercel.app",
+      "https://library-management-frontend-delta-lyart.vercel.app"
     ],
     credentials: true,
   })
